@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AAD631BE-FFDE-42DF-9940-D7FA098AB532}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zвук</RootNamespace>
+    <AssemblyName>Zвук</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MACTrackBarLib, Version=1.0.2342.28161, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MAC_Slider_demo\MACTrackBarLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Visual\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\AboutForm.designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\BoomBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\BoomBox.Designer.cs">
+      <DependentUpon>BoomBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\EditableButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Visual\EffectsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\EffectsForm.Designer.cs">
+      <DependentUpon>EffectsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\SoundEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\SoundEditor.Designer.cs">
+      <DependentUpon>SoundEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\Speaker\FaceControl.cs" />
+    <Compile Include="Visual\Speaker\FaceMediaOutput.cs" />
+    <Compile Include="Visual\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Visual\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\BoomBox.resx">
+      <DependentUpon>BoomBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\EditableButton.resx">
+      <DependentUpon>EditableButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\EffectsForm.resx">
+      <DependentUpon>EffectsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\RecordForm.resx">
+      <DependentUpon>RecordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\SamplesForm.resx">
+      <DependentUpon>SamplesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\SoundEditor.resx">
+      <DependentUpon>SoundEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Speaker\Speaker.resx">
+      <DependentUpon>Speaker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Vinil.resx">
+      <DependentUpon>Vinil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\WavePanel.resx">
+      <DependentUpon>WavePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Visual\RecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\RecordForm.Designer.cs">
+      <DependentUpon>RecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\SamplesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\SamplesForm.Designer.cs">
+      <DependentUpon>SamplesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\Speaker\Speaker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Speaker\Speaker.Designer.cs">
+      <DependentUpon>Speaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\Vinil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Vinil.designer.cs">
+      <DependentUpon>Vinil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\VoiceMediaOutput.cs" />
+    <Compile Include="Visual\WavePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\WavePanel.Designer.cs">
+      <DependentUpon>WavePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\WavePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VoiceEngine\VoiceEngine.csproj">
+      <Project>{0331000E-A3F4-4E03-A977-4608CE65A218}</Project>
+      <Name>VoiceEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\media-playback-start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\media-playback-start - копия.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\media-playback-stop - копия.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\media-playback-stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\media-playback-pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\applications-system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\player_record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange_plus_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-plus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vinil.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_old.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help-faq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\specs_ringtones_icon_new.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_video_a.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_video_a2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\n_55625_s.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
